@@ -1,0 +1,119 @@
+<html>
+
+<head>
+
+    <title>Kris Kierzkowsky</title>
+
+<meta charset="UTF-8">
+<meta name="author" content="Kris Kierzkowsky"
+<meta name="keyword" content="pierwsza strona internetowa, Kris Kierzkowsky">
+<link rel="stylesheet" href="style/main.css">
+
+</head>
+
+<body>
+
+<button class="zoom">zoom</button>
+<button class="move">move</button>
+<button class="color">color</button>
+
+<div class="square red"></div>
+<div class="square blue"></div>
+<div class="square green"></div>
+
+</body>
+
+</html>
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Monserrat', sans-serif;
+    color: white;
+    background-color: #333;
+}
+
+button{
+    width: 130px;
+    position: absolute;
+    padding: 10px 30px;
+    background: none;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    border-color: #fff;
+    top: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: translate(-50%);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition-duration: 0.5s;
+}
+
+.zoom{
+    left: 30%;
+}
+
+.zoom:hover ~ .square{
+    width: 200px;
+    height: 200px;
+    transition-duration: 1s;
+}
+
+.move{
+    left: 50%
+}
+
+.move:hover ~ .square{
+    top: 300px;
+    transition-duration: 1s;
+}
+
+.color{
+    left: 70%;
+}
+
+.color:hover ~ .square{
+    background-color: black;
+    box-shadow: 10px 10px 20px black;
+    transition-duration: 1s;
+}
+.square{
+    position: absolute;
+    top: 120px;
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    border: 1px solid black;
+    transform: translate(-50%);
+}
+
+.red{
+    left: 30%;
+    background-color: red;
+    box-shadow: 10px 10px 20px red;
+}
+
+.blue{
+    left: 50%;
+    background-color: royalblue;
+    box-shadow: 10px 10px 20px royalblue;
+}
+
+.green{
+    left: 70%;
+    background-color: green;
+    box-shadow: 10px 10px 20px green;
+}
